@@ -40,16 +40,17 @@ class Snake{
 
     moveHandle(){
         document.addEventListener("keydown",(e)=>{
-            if(e.key == 'a' && this.dx == 0){
+            var key = e.key.toLocaleLowerCase();
+            if(key == 'a' && this.dx == 0){
                 this.dx = -this.grid;
                 this.dy = 0;
-            }else if(e.key =='w' && this.dy == 0 ){
+            }else if(key =='w' && this.dy == 0 ){
                 this.dx = 0;
                 this.dy = -this.grid;
-            }else if(e.key == 'd' && this.dx == 0){
+            }else if(key == 'd' && this.dx == 0){
                 this.dx = this.grid;
                 this.dy = 0;
-            }else if(e.key =='s' && this.dy == 0){
+            }else if(key =='s' && this.dy == 0){
                 this.dx = 0;
                 this.dy = this.grid
             }
