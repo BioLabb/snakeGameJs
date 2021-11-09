@@ -55,6 +55,28 @@ class Snake{
                 this.dy = this.grid
             }
         })
+
+        //handle on mobile
+        var keyElements = document.querySelectorAll(".key");
+        for(let i = 0; i < keyElements.length; i++){
+            keyElements[i].addEventListener("click",(e)=>{
+                var key = keyElements[i].innerHTML.toLocaleLowerCase();
+                
+                if(key == 'a' && this.dx == 0){
+                this.dx = -this.grid;
+                this.dy = 0;
+            }else if(key =='w' && this.dy == 0 ){
+                this.dx = 0;
+                this.dy = -this.grid;
+            }else if(key == 'd' && this.dx == 0){
+                this.dx = this.grid;
+                this.dy = 0;
+            }else if(key =='s' && this.dy == 0){
+                this.dx = 0;
+                this.dy = this.grid
+            }
+            })
+        }
         
     }
 

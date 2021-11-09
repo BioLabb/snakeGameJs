@@ -1,6 +1,7 @@
 $(document).ready(function(){
     // hightlight phim di chuyen khi dc nhan
 $(document).keydown(function(e){
+    
     var key = e.key.toLowerCase();
     $("."+key).toggleClass("color-yellow");
     // huy hightlight 
@@ -9,6 +10,13 @@ $(document).keydown(function(e){
     },200);
 
 });
+
+$(".key").click(function(e){
+    $(this).toggleClass("color-yellow");
+    setTimeout(()=>{
+        $(this).removeClass("color-yellow")
+    },200);
+})
 
 var pointBefore = 0;
 var pointUpdate = setInterval(()=>{
