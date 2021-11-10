@@ -15,6 +15,7 @@ canvas{
     color: yellow;
 }
 .info-key{
+    width: 100%;
     margin-top: 120px ;
     background-color: aliceblue;
     font-weight: 600;
@@ -28,6 +29,29 @@ canvas{
 .info-key .line-key-2 div{
     padding: 0 20px;
 }
+.key{
+    margin-bottom: 10px;
+    margin-left: 15px;
+    padding: 15px;
+    border: 1px solid black;
+}
 .color-yellow{
     color: yellow !important;
+}
+@media only screen and (max-width: 739px){
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .hide-on-mobile{
+        display: none;
+    }
+    .info-key{
+        margin-top: 15px;
+    }
+    .line-key-2{
+        display: flex;
+        flex-direction: row;
+    }
+
 }
