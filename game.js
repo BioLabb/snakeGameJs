@@ -23,7 +23,7 @@ class Game{
        if(!this.endGame()){
             this.update();
             this.draw();
-            setTimeout(()=>this.loop(),100);
+            setTimeout(()=>this.loop(),200);
        }else{
             this.drawEnd();
        }
